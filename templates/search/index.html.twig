@@ -1,0 +1,13 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %} Recherche de dossiers | {{parent() }} {% endblock %}
+{% block body %}
+
+<h1>{{ "recherche de dossiers "}}</h1>
+ <div class="row center">
+ <a href="{{ path('search')}}" class="btn-large waves-effect waves-light orange darken-3">Recherche avancée</a>
+ </div>
+
+
+{% endblock %}

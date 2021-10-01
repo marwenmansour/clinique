@@ -13,77 +13,79 @@
   </head>
   <body>
     <style>
+    #container{
+    display: flex;
+}
+
+#container img{
+    width:60%;
+    height:auto;
+    vertical-align: middle;
+}
+
+#container div{
+    width:50%;
+    
+}
+
+#container #img-container{
+    display:flex;
+    align-items: center;
+}
+#container p{
+    padding: 0 15px
+}
         html,body{
         font-family: 'Lato', sans-serif;
         font-size: 1.2em;
-       
-     
       }
-      .container{
-        display: flex;
-      }
+      
       h3{
-        color: #fa9e0a;
+        color:#6e6e6e ;
       }
       h1{
        text-align: center;
-        color:#6e6e6e;
+        color:#fa9e0a;
         font-weight: bold;
       }
-      
-      nav ul li
-        {
-            margin:0 10px; 
-            
-        }
       </style>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="{{path('home')}}">Doctolib</a>
+          <a class="navbar-brand" href="#">DrSanté</a>
+
+         
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="container">
+        
+         
           <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="#">Acceuil
+                <a class="nav-link active" href="{{path('home')}}">Acceuil
                   <span class="visually-hidden"></span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="{{path('dossier_patient')}}">Détails dossiers</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="{{path('search')}}">Recherche</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Separated link</a>
-                </div>
-              </li>
+              
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-sm-2" type="text" placeholder="Search">
-              <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            
           </div>
+              
         </div>
-    </div>
       </nav> 
       <div class="container">
    
-      {% block body%}{% endblock %}
+      {% block body %}{% endblock %}
       
       </div>
+
+   
        {% block js%}
        
     <!-- Optional JavaScript -->
